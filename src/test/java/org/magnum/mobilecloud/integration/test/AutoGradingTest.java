@@ -1,7 +1,9 @@
 package org.magnum.mobilecloud.integration.test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -13,7 +15,7 @@ import org.junit.jupiter.api.Test;
 import org.magnum.mobilecloud.video.TestData;
 import org.magnum.mobilecloud.video.client.SecuredRestBuilder;
 import org.magnum.mobilecloud.video.client.VideoSvcApi;
-import org.magnum.mobilecloud.video.repository.Video;
+import org.magnum.mobilecloud.video.model.Video;
 
 import io.magnum.autograder.junit.Rubric;
 import retrofit.ErrorHandler;
@@ -280,7 +282,7 @@ public class AutoGradingTest {
 		for (Video v : videos){
 			readWriteVideoSvcUser1.addVideo(v);
 		}
-
+		
 		// Search for "The Cat"
 		Collection<Video> searchResults = readWriteVideoSvcUser1.findByTitle(names[0]);
 		assertTrue(searchResults.size() > 0);

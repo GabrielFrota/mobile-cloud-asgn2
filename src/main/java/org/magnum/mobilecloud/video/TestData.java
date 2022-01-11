@@ -1,9 +1,10 @@
 package org.magnum.mobilecloud.video;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.magnum.mobilecloud.video.repository.Video;
 
 import java.util.UUID;
+
+import org.magnum.mobilecloud.video.model.Video;
 
 /**
  * This is a utility class to aid in the construction of

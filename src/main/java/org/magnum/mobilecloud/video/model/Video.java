@@ -1,4 +1,4 @@
-package org.magnum.mobilecloud.video.repository;
+package org.magnum.mobilecloud.video.model;
 
 import java.util.HashSet;
 import java.util.Set;
